@@ -1,87 +1,104 @@
-# Welcome to React Router!
+# 🎧 Wubble QuickTune – Mini AI Music Preview Generator
 
-A modern, production-ready template for building full-stack React applications using React Router.
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
-
-## Features
-
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
-
-## Getting Started
-
-### Installation
-
-Install the dependencies:
-
-```bash
-npm install
-```
-
-### Development
-
-Start the development server with HMR:
-
-```bash
-npm run dev
-```
-
-Your application will be available at `http://localhost:5173`.
-
-## Building for Production
-
-Create a production build:
-
-```bash
-npm run build
-```
-
-## Deployment
-
-### Docker Deployment
-
-To build and run using Docker:
-
-```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+A single-page full stack web app that lets users generate and preview AI-inspired royalty-free music clips based on selected moods and genres.
 
 ---
 
-Built with ❤️ using React Router.
+## 🚀 Features
+
+- 🎼 **Mood & Genre Selector** – Choose from Happy, Sad, Chill, Energetic and genres like Lo-fi, EDM, Pop, Cinematic
+- 🔁 **AI Track Simulation** – Generates a random mock track with a loading effect
+- 🔊 **Audio Preview** – Listen to the generated track in-browser
+- ❤️ **Like/Favorite Track** – Store liked tracks using `localStorage`
+- 📥 **Download** – Save the audio file directly
+
+---
+
+## 🖼️ UI Preview
+
+| Generator UI | Track Preview |
+|--------------|----------------|
+| ![UI](https://www.wubble.ai/logo@2x.png) | 🎵 Audio preview with download + like buttons |
+
+---
+
+## 🏗️ Tech Stack
+
+### 🔹 Frontend
+- [React.js](https://reactjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Zustand](https://github.com/pmndrs/zustand) – lightweight state management
+- [Vite](https://vitejs.dev/) – for lightning-fast dev environment
+
+### 🔹 Backend
+- [Node.js](https://nodejs.org/)
+- [Express.js](https://expressjs.com/)
+- REST API for dynamic track generation
+
+---
+
+## ⚙️ How to Run Locally
+
+### 1. Clone the Repo
+
+
+2. Start Backend
+
+cd server
+npm install
+node app.js
+
+3. Start Frontend
+
+npm install
+npm run dev
+
+Make sure your backend is running at http://localhost:5000.
+
+
+⸻
+
+🧠 Logic Flow
+	1.	User selects mood and genre
+	2.	Clicks “Generate Track”
+	3.	Simulated loading (2s timeout)
+	4.	Fetches random track via backend API
+	5.	Displays playable audio + Download + Like
+
+⸻
+
+✅ Improvements (see FUTURE.md)
+	•	Add pagination/history for generated tracks
+	•	Integrate real-time music AI generator API
+	•	User login + save favorites across devices
+	•	Cloud storage for tracks
+	•	Animate mood/genre selectors with Framer Motion
+
+⸻
+
+🧪 Bonus Features
+	•	localStorage for liked tracks
+	•	Optional Dark Mode toggle
+	•	Custom loading animation
+
+⸻
+
+🧑‍💻 Developed By
+
+SHASHANK MISHRA – Full Stack Developer Intern (Assignment for Wubble.ai)
+
+⸻
+
+📩 Contact
+
+For questions or suggestions, feel free to reach out:
+	•	📧 Email: shashankmishra2604@gmail.com
+	•	💼 LinkedIn: linkedin.com/in/shashank-link/
+
+⸻
+
+📄 License
+
+This project is for educational/demonstration purposes only. Royalty-free audio sourced from SoundHelix or other public domains.
+
+---
